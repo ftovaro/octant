@@ -17,3 +17,8 @@ import (
 type ActionDispatcher interface {
 	Dispatch(ctx context.Context, alerter action.Alerter, actionName string, payload action.Payload) error
 }
+
+//hola
+
+
+//adios
