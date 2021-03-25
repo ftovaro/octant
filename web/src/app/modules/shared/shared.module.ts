@@ -84,6 +84,7 @@ import { DataModule } from '../../data/data.module';
 import { OverlayscrollbarsModule } from 'overlayscrollbars-ngx';
 import { StringEscapePipe } from './pipes/stringEscape/string.escape.pipe';
 import { IconComponent } from './components/presentation/icon/icon.component';
+import { SignpostComponent } from './components/presentation/signpost/signpost.component';
 
 @NgModule({
   declarations: [
@@ -135,6 +136,7 @@ import { IconComponent } from './components/presentation/icon/icon.component';
     SafePipe,
     AnsiPipe,
     StringEscapePipe,
+    SignpostComponent,
     FormatPathPipe,
     RelativePipe,
     TruncatePipe,
@@ -192,6 +194,7 @@ import { IconComponent } from './components/presentation/icon/icon.component';
     HeptagonLabelComponent,
     IFrameComponent,
     IndicatorComponent,
+    IconComponent,
     LabelsComponent,
     LabelSelectorComponent,
     LinkComponent,

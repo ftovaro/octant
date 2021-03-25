@@ -599,3 +599,13 @@ export interface IconView extends View {
     color: string;
   };
 }
+
+export interface SignpostView extends View {
+  config: {
+    component: View;
+    trigger: View;
+    message: string;
+    column: false;
+    reverse: false;
+  };
+}
