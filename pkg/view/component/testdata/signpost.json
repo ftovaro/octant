@@ -1,0 +1,34 @@
+{
+  "metadata":{
+    "type":"signpost"
+  },
+  "config":{
+    "component":{
+      "metadata":{
+        "type":"text"
+      },
+      "config":{
+        "value":"test"
+      }
+    },
+    "trigger":{
+      "metadata":{
+        "type":"icon"
+      },
+      "config":{
+        "shape":"user",
+        "size":"",
+        "direction":"",
+        "flip":"",
+        "solid":false,
+        "status":"",
+        "inverse":false,
+        "badge":"",
+        "color":""
+      }
+    },
+    "message":"Message",
+    "reverse":false,
+    "column":false
+  }
+}

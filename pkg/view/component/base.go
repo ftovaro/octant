@@ -88,6 +88,8 @@ const (
 	TypeYAML = "yaml"
 	// TypeIcon is a Icon component.
 	TypeIcon = "icon"
+	// TypeSignPost is a SignPost component.
+	TypeSignPost = "signpost"
 )
 
 // Base is an abstract base for components..
