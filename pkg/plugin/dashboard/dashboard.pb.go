@@ -807,6 +807,7 @@ type NavigationResponse_Navigation struct {
 	Children   []*NavigationResponse_Navigation `protobuf:"bytes,3,rep,name=children,proto3" json:"children,omitempty"`
 	IconName   string                           `protobuf:"bytes,4,opt,name=icon_name,json=iconName,proto3" json:"icon_name,omitempty"`
 	IconSource string                           `protobuf:"bytes,5,opt,name=icon_source,json=iconSource,proto3" json:"icon_source,omitempty"`
+	CustomSvg  string                           `protobuf:"bytes,5,opt,name=custom_svg,json=customSvg,proto3" json:"custom_svg,omitempty"`
 }
 
 func (x *NavigationResponse_Navigation) Reset() {
@@ -872,6 +873,13 @@ func (x *NavigationResponse_Navigation) GetIconName() string {
 func (x *NavigationResponse_Navigation) GetIconSource() string {
 	if x != nil {
 		return x.IconSource
+	}
+	return ""
+}
+
+func (x *NavigationResponse_Navigation) GetCustomSvg() string {
+	if x != nil {
+		return x.CustomSvg
 	}
 	return ""
 }

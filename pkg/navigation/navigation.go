@@ -59,6 +59,7 @@ type Navigation struct {
 	Children    []Navigation `json:"children,omitempty"`
 	IconName    string       `json:"iconName,omitempty"`
 	Loading     bool         `json:"isLoading"`
+	CustomSvg   string       `json:"customSvg,omitempty"`
 }
 
 // New creates a Navigation.
@@ -215,6 +216,7 @@ type navConfig struct {
 	suffix    string
 	iconName  string
 	isLoading bool
+	customSvg string
 }
 
 // EntriesHelper generates navigation entries.
@@ -229,6 +231,19 @@ func (neh *EntriesHelper) Add(title, suffix string, isLoading bool) {
 	})
 }
 
+// SetCustomSvg sets the icon for the navigation entry.
+func SetCustomSvg(customSvg string) Option {
+	return func(n *Navigation) error {
+		if customSvg == "" {
+			return nil
+		}
+
+		n.CustomSvg = customSvg
+
+		return nil
+	}
+}
+
 // Generate generates navigation entries.
 func (neh *EntriesHelper) Generate(prefix, namespace, name string) ([]Navigation, error) {
 	var navigations []Navigation
@@ -236,7 +251,8 @@ func (neh *EntriesHelper) Generate(prefix, namespace, name string) ([]Navigation
 	for _, nc := range neh.navConfigs {
 		navigation, err := New(nc.title, path.Join(prefix, nc.suffix),
 			SetNavigationIcon(nc.iconName),
-			SetLoading(nc.isLoading))
+			SetLoading(nc.isLoading),
+			SetCustomSvg(nc.customSvg))
 		if err != nil {
 			return nil, err
 		}
